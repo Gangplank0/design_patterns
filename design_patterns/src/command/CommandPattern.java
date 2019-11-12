@@ -1,9 +1,9 @@
 package command;
 /**
  * @todo
- * @author ³ÉÃ÷¿¡
+ * @author æˆæ˜ä¿Š
  * @email 1047914020@qq.com
- * @date 2019Äê10ÔÂ31ÈÕ
+ * @date 2019å¹´10æœˆ30æ—¥
  */
 public class CommandPattern
 {
@@ -11,11 +11,11 @@ public class CommandPattern
     {
         Command cmd=new ConcreteCommand();
         Invoker ir=new Invoker(cmd);
-        System.out.println("¿Í»§·ÃÎÊµ÷ÓÃÕßµÄcall()·½·¨...");
+        System.out.println("å®¢æˆ·è®¿é—®è°ƒç”¨è€…çš„call()æ–¹æ³•...");
         ir.call();
     }
 }
-//µ÷ÓÃÕß
+//è°ƒç”¨è€…
 class Invoker
 {
     private Command command;
@@ -29,16 +29,16 @@ class Invoker
     }
     public void call()
     {
-        System.out.println("µ÷ÓÃÕßÖ´ĞĞÃüÁîcommand...");
+        System.out.println("è°ƒç”¨è€…æ‰§è¡Œå‘½ä»¤command...");
         command.execute();
     }
 }
-//³éÏóÃüÁî
+//æŠ½è±¡å‘½ä»¤
 interface Command
 {
     public abstract void execute();
 }
-//¾ßÌåÃüÁî
+//å…·ä½“å‘½ä»¤
 class ConcreteCommand implements Command
 {
     private Receiver receiver;
@@ -51,11 +51,11 @@ class ConcreteCommand implements Command
         receiver.action();
     }
 }
-//½ÓÊÕÕß
+//æ¥æ”¶è€…
 class Receiver
 {
     public void action()
     {
-        System.out.println("½ÓÊÕÕßµÄaction()·½·¨±»µ÷ÓÃ...");
+        System.out.println("æ¥æ”¶è€…çš„action()æ–¹æ³•è¢«è°ƒç”¨...");
     }
 }
