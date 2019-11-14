@@ -12,3 +12,4 @@
   变量的声明类型尽量是接口或者是抽象类。
   任何类都不应该从具体类派生。
   使用继承时尽量遵循里氏替换原则。
+https://github.com/Gangplank0/design_patterns/blob/master/Open%20closed%20Principle(%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99)/Dependence.jpg
